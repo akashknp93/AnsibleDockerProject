@@ -1,0 +1,6 @@
+---
+  - hosts: all
+    become: true
+    tasks:
+     - name: create docker container
+       shell: docker run -d --name tomcat_container -p 1234:8080 akashgupta17/tomcat_image 
